@@ -36,7 +36,7 @@ public class EmployeeDetails {
 					ps.setString(2, address);
 					ps.executeUpdate();
 				} else if (choice == 2) {
-					// update empty column.
+					// update empty column with office address.
 					String sql = "UPDATE details SET address='Kochi' WHERE address='' ";
 					stmt.executeUpdate(sql);
 					// Delete empty column.
