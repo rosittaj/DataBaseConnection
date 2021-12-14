@@ -42,10 +42,11 @@ public class EmployeeDetails {
 					// Delete empty column.
 					sql = "delete from details where address=''";
 					stmt.executeUpdate(sql);
+					//Show all the Data in a specific table.
 					ResultSet rs = stmt.executeQuery("select * from details");
 					while (rs.next()) {
 						System.out.println("---------------------------");
-						System.out.println("    " +rs.getString(1) + " " + rs.getString(2));
+						System.out.println("    " + rs.getString(1) + " " + rs.getString(2));
 					}
 					System.out.println("---------------------------");
 				} else if (choice == 3) {
@@ -55,6 +56,7 @@ public class EmployeeDetails {
 					System.out.println("Sorry please enter a valid number \n");
 				}
 			}
+			con.close();//Close the Database connection.
 		}
 
 		catch (Exception e) {
